@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2c2c2c;
+    color: #fff;
+    font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.book-container {
+    width: 90%;
+    max-width: 900px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+.page-display {
+    width: 100%;
+    max-height: 70vh;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-display img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.nav-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.page-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.sound-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sound-btn {
+    padding: 8px 14px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 開啟狀態的按鈕樣式 */
+.sound-btn.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* 關閉狀態的按鈕樣式 */
+.sound-btn.muted {
+    background-color: #757575;
+    color: #e0e0e0;
+}
+
+.sound-btn.replay {
+    background-color: #ff9800;
+    color: white;
+}
+
+.sound-btn.replay:hover {
+    background-color: #e68a00;
+}

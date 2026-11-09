@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有聲電子繪本</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="book-container">
+        <!-- 繪本主要顯示區域 -->
+        <div class="page-display">
+            <img id="page-image" src="" alt="繪本頁面">
+        </div>
+
+        <!-- 導覽與聲音控制器 -->
+        <div class="controls">
+            <!-- 上一頁按鈕 -->
+            <button id="prev-btn" class="nav-btn">
+                <img src="assets/graphics/left.jpg" alt="上一頁">
+            </button>
+
+            <!-- 頁碼與聲音控制面板 -->
+            <div class="page-info">
+                <span id="page-number">頁數 1 / 20</span>
+                
+                <div class="sound-controls">
+                    <button id="toggle-music-btn" class="sound-btn active">🎵 背景音樂：開</button>
+                    <button id="toggle-speech-btn" class="sound-btn active">🗣️ 語音旁白：開</button>
+                    <button id="play-sound-btn" class="sound-btn replay">🔊 重新播放聲音</button>
+                </div>
+            </div>
+
+            <!-- 下一頁按鈕 -->
+            <button id="next-btn" class="nav-btn">
+                <img src="assets/graphics/right.jpg" alt="下一頁">
+            </button>
+        </div>
+    </div>
+
+    <!-- 隱藏的音訊標籤 -->
+    <audio id="bg-music" loop></audio>
+    <audio id="speech-audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
